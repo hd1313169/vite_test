@@ -1,6 +1,13 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
 import HelloWorld from './components/HelloWorld.vue'
+import CardComponent from './components/CardComponent.vue';
+
+export default{
+  components:{
+    HelloWorld,
+    CardComponent,
+  }
+}
 </script>
 
 <template>
@@ -9,6 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <CardComponent></CardComponent>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -20,7 +28,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<!-- <style>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -82,4 +90,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style> -->
